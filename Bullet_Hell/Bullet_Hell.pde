@@ -27,6 +27,8 @@ ArrayList<Star> stars;
 
 
 void setup() {
+  frameRate(60);
+  
   size(800,800);
   mode = GAME;
   textAlign(CENTER, CENTER);
