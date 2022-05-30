@@ -21,20 +21,25 @@ color purple = #8400FF;
 color pink = #FF00A1;
 
 
-ArrayList<Star> stars;
+ArrayList<GameObject> objects;
 
+Starfighter player1;
 
-
+boolean wkey, akey, skey, dkey;
 
 void setup() {
   frameRate(60);
-  
   size(800,800);
+ 
+  wkey = skey = akey = dkey = false;
+  
   mode = GAME;
+  
   textAlign(CENTER, CENTER);
   
-  stars = new ArrayList<Star>();
-
+  objects = new ArrayList<GameObject>();
+  player1 = new Starfighter();
+  objects.add(player1);
 
 } //===================================================================================
 void draw() {
