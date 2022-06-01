@@ -20,7 +20,7 @@ class Starfighter extends GameObject {
     if(!wkey && !skey) vy = vy * 0.86;
     if(!akey && !dkey) vx = vx * 0.86;
     
-    if(space) objects.add(new Bullet());
+    if(spacekey) objects.add(new Bullet());
 }
 
   void show() {

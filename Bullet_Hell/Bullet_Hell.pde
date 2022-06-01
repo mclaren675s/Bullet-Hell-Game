@@ -25,13 +25,13 @@ ArrayList<GameObject> objects;
 
 Starfighter player1;
 
-boolean wkey, akey, skey, dkey;
+boolean wkey, akey, skey, dkey, spacekey;
 
 void setup() {
   frameRate(60);
   size(800,800);
  
-  wkey = skey = akey = dkey = false;
+  wkey = skey = akey = dkey = spacekey = false;
   
   mode = GAME;
   
