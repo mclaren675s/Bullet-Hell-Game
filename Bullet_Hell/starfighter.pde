@@ -26,6 +26,5 @@ class Starfighter extends GameObject {
     if (dkey) vx = +5;
     if (!wkey && !skey) vy = vy * 0.9;
     if (!akey && !dkey) vx = vx * 0.9;
-  
  }
 }

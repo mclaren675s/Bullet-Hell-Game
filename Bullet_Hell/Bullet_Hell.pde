@@ -1,5 +1,7 @@
 //Alex Chapman
 
+// video part 7 13:18
+
 //GLOBAL VARIABLES
 int mode;
 final int INTRO = 0;
@@ -14,6 +16,8 @@ color black = #000000;
 color spacebg = #1B2436;
 color mainship = #5a189a;
 color maingun = #e0aaff;
+color enemy1 = #4895ef;
+
 
 ArrayList<GameObject> objects;
 Starfighter player1;

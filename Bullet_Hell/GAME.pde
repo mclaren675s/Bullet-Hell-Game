@@ -1,5 +1,6 @@
 void game() {
   objects.add(0, new Star());
+  objects.add(new Enemy1());
   fill(spacebg, 150);
   rect(0, 0, 800, 800);
 
