@@ -1,7 +1,7 @@
 void game() {
-  
   objects.add(0, new Star());
-  background(0);
+  fill(spacebg, 150);
+  rect(0, 0, 800, 800);
 
   //Arraylist Loop
   int i = 0;

@@ -11,15 +11,9 @@ final int UTILITIES = 4;
 // COLOR PALLETTE
 color white = #FFFFFF;
 color black = #000000;
-color red = #FF0A12;
-color orange = #FF7300;
-color yellow = #f4e409;
-color green = #90FE00;
-color lightBlue = #F962A0;
-color darkBlue = #0015FF ;
-color purple = #8400FF;
-color pink = #FF00A1;
-
+color spacebg = #1B2436;
+color mainship = #5a189a;
+color maingun = #e0aaff;
 
 ArrayList<GameObject> objects;
 Starfighter player1;
