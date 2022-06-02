@@ -1,25 +1,13 @@
 class Star extends GameObject {
 
-
+  //constructor
   Star() {
-    x = random(0, width);
-    y = 0;
-    vx = 0;
-    vy = 3;
-    size = random (1, 5);
-    lives = 1;
-    c = #ffea00;
+    super(random(width), 0, 0, 0, random(1,5), #ffffff, 1);
+    vy = size;
   }
 
   void act() {
     super.act();
-    if (y > height) {
-      lives = 0;
-    }
-  }
-
-  void show() {
-    fill(c);
-    rect(x, y, size, size);
+    if (y > height) lives = 0;
   }
 }

@@ -1,17 +1,15 @@
 void game() {
   
   objects.add(0, new Star());
-
   background(0);
 
+  //Arraylist Loop
   int i = 0;
   while (i < objects.size()) {
-
     GameObject obj = objects.get(i);
     obj.act();
     obj.show();
     if (obj.lives == 0) {
-
       objects.remove(i);
     } else {
       i++;

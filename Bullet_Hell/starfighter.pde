@@ -2,11 +2,7 @@ class Starfighter extends GameObject {
 
   //constructor
   Starfighter() {
-    x = width/2;
-    y = height/2;
-    vx = vy = 0;
-    lives = 3;
-    c = #FFFFFF;
+    super(width/2, height/2, 0, 0, 40, #3F12C9, 3);
   }
 
   //behaviour functions
@@ -16,15 +12,11 @@ class Starfighter extends GameObject {
     if (skey) vy = +5;
     if (akey) vx = -5;
     if (dkey) vx = +5;
-    
-    if(!wkey && !skey) vy = vy * 0.86;
-    if(!akey && !dkey) vx = vx * 0.86;
-    
-    if(spacekey) objects.add(new Bullet());
-}
 
-  void show() {
-    fill(c);
-    rect(x, y, 40, 40);
+    if (!wkey && !skey) vy = vy * 0.9;
+    if (!akey && !dkey) vx = vx * 0.9;
+
+    //bullet fire
+    if (spacekey) objects.add(new Bullet());
   }
 }

@@ -1,10 +1,18 @@
-class GameObject {
+abstract class GameObject {
 
+  //Instance Variables
   float x, y, vx, vy, size;
   int lives;
   color c;
   
-  GameObject() {
+  GameObject(float x, float y, float vx, float vy, float size, color c, int lives) {
+    this.x     = x;
+    this.y     = y;
+    this.vx    = vx;
+    this.vy    = vy;
+    this.size  = size;
+    this.c     = c;
+    this.lives = lives;
   }
 
   void act() {

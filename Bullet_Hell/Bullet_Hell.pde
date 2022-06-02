@@ -22,7 +22,6 @@ color pink = #FF00A1;
 
 
 ArrayList<GameObject> objects;
-
 Starfighter player1;
 
 boolean wkey, akey, skey, dkey, spacekey;
