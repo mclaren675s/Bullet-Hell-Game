@@ -12,7 +12,7 @@ class Enemy1 extends GameObject {
      while (i < objects.size()) {
        GameObject obj = objects.get(i);
        if (obj instanceof Bullet) {
-         if (collidingWith(obj)); {
+         if (collidingWith(obj)) {
            lives--; //minus 1 life
            
          }
