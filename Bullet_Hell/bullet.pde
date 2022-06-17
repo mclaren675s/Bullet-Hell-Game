@@ -6,6 +6,6 @@ class Bullet extends GameObject {
   
   void act() {
     super.act();
-    if (x < 0 || x > width || y < 0 || y > height) lives = 0;  
+    if (offScreen()) lives = 0;  
   }  
 }

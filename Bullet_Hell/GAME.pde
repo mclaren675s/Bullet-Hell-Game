@@ -1,11 +1,20 @@
 void game() {
-  objects.add(0, new Star());
-  objects.add(new Enemy1());
   fill(spacebg, 150);
-  rect(0, 0, 800, 800);
+  rect(width/2, height/2, width, height);
+  addObjects();
+  gameEngine();
+  debug(); 
 
-  //Arraylist Loop
-  int i = 0;
+}
+
+void addObjects() {
+  objects.add(0, new Star());
+  
+  if (frameCount % 30 == 0) objects.add(new Enemy1());
+}
+
+void gameEngine() {
+   int i = 0;
   while (i < objects.size()) {
     GameObject obj = objects.get(i);
     obj.act();
@@ -16,8 +25,9 @@ void game() {
       i++;
     }
   }
+}
 
-
+void debug() {
   fill(white);
   textSize(25);
   text(frameRate, 50, 10);

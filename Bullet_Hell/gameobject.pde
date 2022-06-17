@@ -29,4 +29,8 @@ abstract class GameObject {
     return dist(obj.x, obj.y, x, y) < obj.size/2 + size/2;  
   }
   
+  boolean offScreen() {
+    return x < 0 || x > width || y < -50 || y > height;
+  }
+  
 }

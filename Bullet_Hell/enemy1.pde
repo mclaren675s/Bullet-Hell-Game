@@ -7,6 +7,9 @@ class Enemy1 extends GameObject {
    void act() {
      super.act();
      
+     //shoot
+     objects.add(new EnemyBullet(x, y, 0, 10));
+     
      //collisons
      int i = 0;
      while (i < objects.size()) {
@@ -14,12 +17,15 @@ class Enemy1 extends GameObject {
        if (obj instanceof Bullet) {
          if (collidingWith(obj)) {
            lives--; //minus 1 life
-           
+           obj.lives = 0;
          }
        }
        i++;
      }
      
+     //remove if off screen
+     if (offScreen()) lives = 0; 
+       
      
    }
   
