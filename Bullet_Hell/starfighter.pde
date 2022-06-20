@@ -26,5 +26,18 @@ class Starfighter extends GameObject {
     if (dkey) vx = +5;
     if (!wkey && !skey) vy = vy * 0.9;
     if (!akey && !dkey) vx = vx * 0.9;
- }
+
+    //collisons
+    int i = 0;
+    while (i < objects.size()) {
+      GameObject obj = objects.get(i);
+      if (obj instanceof EnemyBullet) {
+        if (collidingWith(obj)) {
+          lives--; //minus 1 life
+          obj.lives = 0;
+        }
+      }
+      i++;
+    }
+  }
 }

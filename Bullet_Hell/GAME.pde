@@ -19,7 +19,7 @@ void gameEngine() {
     GameObject obj = objects.get(i);
     obj.act();
     obj.show();
-    if (obj.lives == 0) {
+    if (obj.lives <= 0) {
       objects.remove(i);
     } else {
       i++;
