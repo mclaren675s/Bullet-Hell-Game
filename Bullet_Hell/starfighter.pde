@@ -26,7 +26,7 @@ class Starfighter extends GameObject {
     if (dkey) vx = +5;
     if (!wkey && !skey) vy = vy * 0.9;
     if (!akey && !dkey) vx = vx * 0.9;
-
+    
     //collisons
     int i = 0;
     while (i < objects.size()) {
@@ -39,5 +39,9 @@ class Starfighter extends GameObject {
       }
       i++;
     }
-  }
+    //losing
+    if (lives <= 0) {
+      mode = GAMEOVER;
+    }  
+}
 }

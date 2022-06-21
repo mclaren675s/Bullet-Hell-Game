@@ -3,18 +3,18 @@ void game() {
   rect(width/2, height/2, width, height);
   addObjects();
   gameEngine();
-  debug(); 
-
+  debug();
+  HUD();
 }
 
 void addObjects() {
   objects.add(0, new Star());
-  
+
   if (frameCount % 30 == 0) objects.add(new Enemy1());
 }
 
 void gameEngine() {
-   int i = 0;
+  int i = 0;
   while (i < objects.size()) {
     GameObject obj = objects.get(i);
     obj.act();
@@ -29,14 +29,17 @@ void gameEngine() {
 
 void debug() {
   fill(white);
-  textSize(25);
+  //textFont(null);
+  textSize(20);
   text(frameRate, 50, 10);
   text(objects.size(), 50, 30);
 }
 
+void HUD() {
+  textSize(80);
+  textFont(arcade);
+  text(player1.lives, 150, 700);
+}
 
 void gameClicks() {
-
-
-
 }

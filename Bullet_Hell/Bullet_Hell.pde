@@ -18,6 +18,9 @@ color maingun = #e0aaff;
 color enemy1 = #4895ef;
 color bulletcolor = #fb5607;
 
+//font
+PFont arcade;
+
 ArrayList<GameObject> objects;
 
 Starfighter player1;
@@ -28,6 +31,9 @@ void setup() { //============================================================
   frameRate(60);
   size(800, 800);
   rectMode(CENTER);
+  
+  //font
+  arcade = createFont("arcade.TTF", 80);
 
   wkey = skey = akey = dkey = spacekey = false;
 
@@ -40,7 +46,7 @@ void setup() { //============================================================
   objects.add(player1);
 } //===================================================================================
 void draw() {
-  if      (mode == INTRO) {
+  if (mode == INTRO) {
     intro();
   } else if (mode == GAME) {
     game();
